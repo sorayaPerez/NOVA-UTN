@@ -3,155 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./app.js"></script>
 
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- -->
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800;900&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style_1.css"> -->
+	<link rel="stylesheet" href="index.css">
 
+    <script defer src="./js/cartService.js" ></script>
+    <script defer src="./js/index.js" ></script>
 </head>
 <body>
-
-    <!--=================================================== SECCIÓN NOSOTROS -->
-    <section class="sectionNosotros">
-        <div class="tituloNosotros">
-            <h3> Comenzá tu viaje con </h3>
-            <span> <h2> Nosotros </h2> </span>
+<main class="main">
+<!-- Nav-bar-->
+<header>
+    <nav class="container_nav" id="Incio">
+        <div class="container_logo">
+            <img  width="50px" height="50px" class="img_log"src="./multimedia/cohete_logo.png" alt="Logo" >
+            <h4 class="text_logo">NOVA</h4>
         </div>
+        
+        <ul class="container_list" id="container_list">
+            <li class="item_list  container_submenu" >
+                <a class="item_link btn_submenu"   href="#Cursos">Cursos</a>
+                <ul class="submenu" id="submenu">
+                    <!-- ul.submenu>li.item_list*6>a.item_link -->
+                    <li class="item_list_"><a href="#" class="item_link_">Programación</a></li>
+                    <li class="item_list_"><a href="#" class="item_link_">Diseño</a></li>
+                    <li class="item_list_"><a href="#" class="item_link_">Marketing</a></li>
+                    <li class="item_list_"><a href="#" class="item_link_">Desarrollo personal</a></li>
+                    <li class="item_list_"><a href="#" class="item_link_">Música</a></li>
+                    <li class="item_list_"><a href="#" class="item_link_">Fotografia</a></li>
+                    <li class="item_list_"><a href="#Cursos" class="item_link_">Todos los cursos</a></li>
+                </ul>
+            </li>
+            <li class="item_list"><a class="item_link" href="#Nosotros">Nosotros</a></li>
+            <li class="item_list"><a class="item_link" href="#Contacto">Contacto</a></li>
+            <li class="item_list"><a class="item_link registro" id="login"  href="#">Iniciar sesión</a></li>
 
+            <li class="icon_container" id="icon_cart">
 
-        <div class="tarjetaEleginos">
-            <img src="./assets/img/abrazomundo.png" alt="">
-            <p> En cualquier parte del mundo</p>
-        </div>
+                <a href="./cart.html" id="cart"><img class="icon_cart" src="./multimedia/cart-fill.svg" alt=""></a>
+                <span id="cuenta-carrito">0</span></a>
+                <div class="text_carrito"><a href="./cart.html">Ir al carrito</a></div>
 
-        <div class="tarjetaEleginos">
-            <div class="tarjetaTexto">
-                <p> Con los mejores profesionales</p>
-                <span> valuados por ustedes</span>
-            </div>
-            <img src="./assets/img/abrazoestrella.png" alt="">
-        </div>
-
-        <div class="tarjetaEleginos">
-            <img src="./assets/img/comunidadnova.png" alt="">
-            <div class="tarjetaTexto">
-                <p> Comunidad NOVA </p>
-                <span> Campus virtual </span>
-            </div>
-        </div>
-
-        <div class="tarjetaEleginos">
-            <div class="tarjetaTexto">
-                <p> Soporte técnico y astro bot</p>
-                <span> 24/7 </span>
-            </div>
-            <img src="./assets/img/soporte.png" alt="">
-        </div>
-
-        <div class="tarjetaEleginos">
-            <img src="./assets/img/tutores.png" alt="">
-            <div class="tarjetaTexto">
-                <p>Tutores durante toda la cursada</p>
-                <span> 9 de cada 10 astro-alumnos </span>
-                <span> finalizan los cursos </span>
+            </li>
+            
+            <li class="icon_container" id="icon_user">
+                <a href="./pages/perfil.html" class="icon_user"><img class="icon_user" src="./multimedia/person-fill.svg" alt=""></a>
                 
+                <ul  id="submenu_user" class="submenu_user">
+                    <li class="item_user"><img src="./multimedia/gear-fill.svg" alt=""><a href="">Configuración</a></li>
+                    <li class="item_user"> <img src="./multimedia/box-arrow-left.svg" alt=""><a id="btn_cerrar_sesion" href="#">Cerrar sesion </a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!-- formulario de inicio de sesion -->
+<div id="container_sesion">    
+        <form action="" class="form" id="form_inicio">
+            <h2 class="titulo">Inicio de Sesion</h2>
+            <span class="close" id="btn_cerrar"><a><img  class="icon_close" src="./multimedia/close.svg" alt=""></a></span>
+            <!-- <span class="close" id="btn_cerrar"><a href="#nav_bar"><img  class="icon_close" src="./multimedia/close.svg" alt=""></a></span> -->
+            <div class="inputForm">
+            <input type="email"  placeholder="Email" id="email">
             </div>
-
+            <div class="inputForm">
+                <input type="password"  placeholder="Contraseña" id="password">
+            </div>
+            <div class="inputForm">
+                <input type="submit" value="Enviar" id="btn_inicio">
+            </div>
+            <p class="text">¿No tenes cuenta? <a href="#" class="registro_inicio_sesion" id="redd_registro" >Registrate!</a> </p>
+        </form>
+</div>
+<!-- formulario de registro -->
+<div id="container_registro">
+    <form action="" class="form" id="form_registro">
+        <h2 class="titulo">Registrarse</h2>
+        <span class="close" id="btn_cerrar_registro"><a href="#nav_bar"><img  class="icon_close" src="./multimedia/close.svg" alt=""></a></span>
+        <div class="inputForm">
+            <input type="text" placeholder="Nombre de usurario" id="user_name_registro">
         </div>
+        <div class="inputForm">
+            <input type="email" placeholder="Email" id="email_registro">
+        </div>
+        <div class="inputForm">
+            <input type="password" placeholder="Contraseña" id="password_registro">
+        </div>
+        <div class="inputForm">
+            <input type="submit" value="Enviar" id="btn_registrarse">
+        </div>
+        <p class="text">¿Ya tenes cuenta? <a href="#" class="registro_inicio_sesion" id="redd_inicio" >Inicia sesion!</a> </p>
+
+    </form>
+</div>
+<!-- Home -->
+        <section id="container_home" class="section">
+            <article class="texto">
+                <p class="promo" >#1 en educacion</p>
+                <div class="nombre" >Somos NOVA</div>
+                <p class="mensaje">Tu plataforma de aprendizaje favorita </p>
+                <div class="btn_registro" id="container_btn_registro"><a class="registro" id="btn_registro">¡Registrate!</a></div>
+            </article>
+            <img class="astro_volando"  src="./multimedia/astro_volando.png" alt="astro">
+        </section>
+<!--  Boton para ir hacia el home -->
+<div class="container_logo_inicio" id="scrollToTopButton">
+    <img  width="50px" height="50px" class="img_log" src="./multimedia/cohete_logo.png" alt="Logo">
+</div>
+<!------------------ TOP 3------------------->
+<section class="container_top">
+    <h1 class="titulo_top">TOP 3 FAVORITOS</h1>
+    <section class="portadas">
+        <div class="imagen">
+            <img class="img" src="./img/curso.png" alt="Imagen 1">
+        </div>
+        <div class="imagen">
+            <img class="img" src="./img/curso.png" alt="Imagen 2">
+        </div>
+        <div class="imagen">
+            <img class="img" src="./img/curso.png" alt="Imagen 3">
+        </div>
+    </section>
+    <section class="texto_">
+        <p class="contorno">
+            En nuestra plataforma, sabemos que la educación es la llave que abre las puertas hacia un futuro lleno de posibilidades. Por eso, estamos emocionados de presentarte nuestros tres cursos más solicitados, que han impactado positivamente la vida de innumerables estudiantes de todo el mundo.
+        </p>
+    </section>
+</section>
 
 
+
+
+
+<!-----------------------CURSOS-------------------->
+
+    <h2 class="titulo_cursos" id="Cursos">Todos los cursos disponibles en NOVA</h2>
+    <section id="productos-container">
+    </section>
+
+    <section id="lista-cursos">
 
     </section>
 
+    <div id="pagination-container" class="pagination-container">
+        <button id="prev-page" class="pagination-button">Anterior</button>
+        <span id="current-page" class="pagination-info">Página 1</span>
+        <button id="next-page" class="pagination-button">Siguiente</button>
+    </div>
+    
 
-    <!--=================================================== SECCIÓN CONTACTO -->
-    <section class="sectionContacto"> 
-        <div class="diseñoFormulario">
-            <div > <img src="./assets/img/planetaamarillo.png"   class="planeta1 planeta" alt="Planeta"></div>
-            <div > <img src="./assets/img/planetaamarillo.png"  class="planeta2 planeta" alt="Planeta"> </div>
-            <div > <img src="./assets/img/planetaamarillo.png"   class="planeta3 planeta" alt="Planeta"></div>
-            <div > <img src="./assets/img/planetaamarillo.png"   class="planeta4 planeta" alt="Planeta"> </div>
-            <div > <img src="./assets/img/planetaamarillo.png"   class="planeta5 planeta" alt="Planeta"></div>
 
-            <div class="container">
-                <div class="form">
-                    <h2>Contactanos</h2>
-                    <form action="">
-                        <div class="inputForm">
-                            <input type="text" placeholder="Nombre">
-                        </div>
-                        <div class="inputForm">
-                            <input type="email" placeholder="Email">
-                        </div>
-                        <div class="inputForm">
-                            <textarea name="message" id="" placeholder="Mensaje..."></textarea>
-                        </div>
-                        <div class="inputForm">
-                            <input type="submit" value="Enviar">
-                        </div>
-                        <p class="text">¡Enseguida te contactamos!</p>
-                        <p class="text">¿No tenes cuenta? <a href="#">Registrate</a></p>
-                    </form>
-                </div>
+<!--=================================================== SECCIÓN NOSOTROS -->
+<section class="sectionNosotros" id="Nosotros">
+    <div class="tituloNosotros">
+        <h3> Comenzá tu viaje con </h3>
+        <span><h2> Nosotros </h2></span>
+    </div>
+
+
+    <div class="tarjetaEleginos">
+        <img src="./assets/img/abrazomundo.png" alt="">
+        <p> En cualquier parte del mundo</p>
+    </div>
+
+    <div class="tarjetaEleginos">
+        <div class="tarjetaTexto">
+            <p> Con los mejores profesionales</p>
+            <span> valuados por ustedes</span>
+        </div>
+        <img src="./assets/img/abrazoestrella.png" alt="">
+    </div>
+
+    <div class="tarjetaEleginos">
+        <img src="./assets/img/comunidadnova.png" alt="">
+        <div class="tarjetaTexto">
+            <p> Comunidad NOVA </p>
+            <span> Campus virtual </span>
+        </div>
+    </div>
+
+    <div class="tarjetaEleginos">
+        <div class="tarjetaTexto">
+            <p> Soporte técnico y astro bot</p>
+            <span> 24/7 </span>
+        </div>
+        <img src="./assets/img/soporte.png" alt="">
+    </div>
+
+    <div class="tarjetaEleginos">
+        <img src="./assets/img/tutores.png" alt="">
+        <div class="tarjetaTexto">
+            <p>Tutores durante toda la cursada</p>
+            <span> 9 de cada 10 astro-alumnos </span>
+            <span> finalizan los cursos </span>
+            
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+<!--=================================================== SECCIÓN CONTACTO -->
+<section class="sectionContacto" id="Contacto"> 
+    <div class="diseñoFormulario">
+        <div > <img src="./assets/img/planetaamarillo.png"   class="planeta1 planeta" alt="Planeta"></div>
+        <div > <img src="./assets/img/planetaamarillo.png"  class="planeta2 planeta" alt="Planeta"> </div>
+        <div > <img src="./assets/img/planetaamarillo.png"   class="planeta3 planeta" alt="Planeta"></div>
+        <div > <img src="./assets/img/planetaamarillo.png"   class="planeta4 planeta" alt="Planeta"> </div>
+        <div > <img src="./assets/img/planetaamarillo.png"   class="planeta5 planeta" alt="Planeta"></div>
+
+        <div class="container">
+            <div class="form_">
+                
+                <form action="">
+                    <h2 class="titulo">Contactanos</h2>
+                    <div class="inputForm">
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div class="inputForm">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="inputForm">
+                        <textarea name="message" id="" placeholder="Mensaje..."></textarea>
+                    </div>
+                    <div class="inputForm">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <p class="text_">¡Enseguida te contactamos!</p>
+                    <p class="text_">¿No tenes cuenta? <a href="#">Registrate</a></p>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!--=================================================== SECCIÓN FOOTER -->
-    <footer>
-        <div class="containerFooter" >
-            <div class="containerFooter_Logo">
-                <img src="./assets/img/cohetevertical.png" alt="">
-                <h4> NOVA </h4>
-            </div>
-            <div class="containerFooter_Secciones">
-                <h4>Menu</h4>
-                <ul>
-                    <li>Inicio</li>
-                    <li>Cursos</li>
-                    <li>Nosotros</li>
-                </ul>
-            </div>
-
-            <div class="containerFooter_Secciones">
-                <h4>Contacto</h4>
-                <ul>
-                    <li>Buenos Aires, Argentina.</li>
-                    <li> plataformanovaarg@gmail.com </li>
-                </ul>
-
-            </div>
-            <div class="containerFooter_Secciones"> 
-                <h4> Comunidad</h4>
-                <ul>
-                    <li>Ustedes</li>
-                    <li>Patrocinadores</li>
-                </ul>
-            </div>
+<!--=================================================== SECCIÓN FOOTER -->
+<footer>
+    <div class="containerFooter" >
+        <div class="containerFooter_Logo">
+            <img src="./assets/img/cohetevertical.png" alt="">
+            <h4> NOVA </h4>
         </div>
-        <div class="hr_footer"></div>
-        <div class="copyright">
-                <p>Copyright ©2023 NOVA Proyecto Final UTN </p>
-                <p> Ilustraciones: catalystsuff - webdecoded</p>
+        <div class="containerFooter_Secciones">
+            <h4>Menu</h4>
+            <ul>
+                <li>Inicio</li>
+                <li>Cursos</li>
+                <li>Nosotros</li>
+            </ul>
         </div>
+
+        <div class="containerFooter_Secciones">
+            <h4>Contacto</h4>
+            <ul>
+                <li>Buenos Aires, Argentina.</li>
+                <li> plataformanovaarg@gmail.com </li>
+            </ul>
+
+        </div>
+        <div class="containerFooter_Secciones"> 
+            <h4> Comunidad</h4>
+            <ul>
+                <li>Ustedes</li>
+                <li>Patrocinadores</li>
+            </ul>
+        </div>
+    </div>
+    <div class="hr_footer"></div>
+    <div class="copyright">
+            <p>Copyright ©2023 NOVA Proyecto Final UTN </p>
+            <p> Ilustraciones: catalystsuff - webdecoded</p>
+    </div>
 <!-- 
-        <img class="imgNubes" src="./assets/img/clouds-1.svg" alt="Nubes de color violeta">
-        <img class="imgNubes2" src="./assets/img/clouds-2.svg" alt="Nubes de color violeta">
-        <img class="imgNubes3" src="./assets/img/clouds-2.svg" alt="Nubes de color violeta"> -->
-    </footer>
+    <img class="imgNubes" src="./assets/img/clouds-1.svg" alt="Nubes de color violeta">
+    <img class="imgNubes2" src="./assets/img/clouds-2.svg" alt="Nubes de color violeta">
+    <img class="imgNubes3" src="./assets/img/clouds-2.svg" alt="Nubes de color violeta"> -->
+</footer>
 
 
 
-    <a href="index.js"></a>
+<a href="index.js"></a>
+</main>
 </body>
 </html>
-
-
-
-<!-- https://www.figma.com/file/3ob5fy5tH4V0GxQYFkvwIy/Pantallas-paso-a-paso?type=design&node-id=9092%3A1170&mode=design&t=sfht67BLse5sDW7f-1 -->
